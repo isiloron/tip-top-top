@@ -33,24 +33,35 @@
     <ClInclude Include="MyButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Label.h">
-    <ClInclude Include="Container.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ImageBox.h">
-    <ClInclude Include="Panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChackBoxGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadingButtonGroup.h">
+=======
+    <ClInclude Include="Container.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CheckBox.h">
-    <ClInclude Include="ChackBoxGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RadioButton.h">
-    <ClInclude Include="ReadingButtonGroup.h">
+>>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -70,8 +81,10 @@
     <ClCompile Include="MyButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Container.cpp">
+<<<<<<< HEAD
     <ClCompile Include="Label.cpp">
+=======
+    <ClCompile Include="Container.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Panel.cpp">
@@ -84,6 +97,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RadioButton.cpp">
+>>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

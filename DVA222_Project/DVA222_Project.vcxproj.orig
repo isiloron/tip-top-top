@@ -77,18 +77,24 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="ChackBoxGroup.h" />
+=======
     <ClInclude Include="Button.h" />
     <ClInclude Include="CheckBox.h" />
     <ClInclude Include="Container.h" />
+>>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
     <ClInclude Include="Graphix.h" />
     <ClInclude Include="ControlBase.h" />
     <ClInclude Include="ImageBox.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="MyButton.h" />
+<<<<<<< HEAD
     <ClInclude Include="ReadingButtonGroup.h" />
+=======
     <ClInclude Include="Panel.h" />
     <ClInclude Include="RadioButton.h" />
+>>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Window.h" />
