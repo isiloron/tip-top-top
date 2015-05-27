@@ -13,9 +13,6 @@
     <ClCompile Include="Container.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="DVA222_Project.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Graphix.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -32,6 +29,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DVA222_Project.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
