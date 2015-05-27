@@ -12,6 +12,8 @@ class Label : public ControlBase
 {
 private:
 	string label;
+	int posx;
+	int posy;
 
 public:
 	Label();
@@ -21,5 +23,7 @@ public:
 	void SetLabel(string s);
 
 	void SetLabelColor(int r,int g,int b);
+	virtual void OnPaint();
+
 
 };

@@ -10,11 +10,11 @@ using namespace std;
 Label::Label()
 {}
 
-Label::Label(string l,int posx ,int posy)
+Label::Label(string l,int x ,int y)
 {
 	label = l;
-	DrawString(l,posx,posy);
-	glColor3f(0,0,0);
+	posx = x;
+	posy = y;
 }
 
 
@@ -32,4 +32,11 @@ void Label::SetLabelColor(int r,int g,int b)
 {
 
 }
+
+void Label::OnPaint()
+{
+		SetColor(0,0,0);
+		DrawString(label,posx,posy);
+}
+
 	
