@@ -6,6 +6,7 @@
 #include "Graphix.h"
 #include "glut.h"
 #include "MyButton.h"
+#include "Label.h"
 
 using namespace std;
 
@@ -17,9 +18,12 @@ int _tmain(int argc, char** argv)
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
     ControlBase* button = new MyButton(10,10,190,60);
+	ControlBase* mylabel = new Label("test123", 100, 50);
 	InitOGL(argc, argv, button);
+	InitOGL(argc, argv, mylabel);
 	//hejhejhej
     delete button;
+	delete mylabel;
 	return 0;
 }
 
