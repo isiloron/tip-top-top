@@ -7,7 +7,7 @@ using namespace std;
 
 class Container : public ControlBase
 {
-private:
+protected:
 	vector<ControlBase*> controlList; // The order of the elements in this list represents the Z value. The last added control will be in front.
 public:
 	Container();
