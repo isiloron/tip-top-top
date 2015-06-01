@@ -30,10 +30,7 @@ void Panel::SetBackgroundColor(int r, int g, int b)
 void Panel::OnPaint(void)
 {
 	SetColor(r, g, b);
-	DrawRectangle(X, Y, Width, Height);
+	FillRectangle(X, Y, Width, Height);
 
-	for (int i = 0; i < controlList.size(); i++)
-	{
-		controlList[i]->OnPaint();
-	}
+	Container::OnPaint();
 }

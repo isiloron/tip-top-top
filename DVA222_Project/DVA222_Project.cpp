@@ -18,11 +18,16 @@ int _tmain(int argc, char** argv)
     //From that point the control is handed over to the OpenGL window and stays there until the user closes the Window.
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
-    ControlBase* button = new MyButton(50,50,180,60);
-	ControlBase* mylabel = new Label("test123", 10, 10);
 
-	//hejhejhej
-    delete button;
+	Panel *panel = new Panel(25, 25, 500, 500);
+	panel->SetBackgroundColor(0, 0, 0);
+
+    ControlBase* button = new MyButton(50,50,180,60);
+	panel->AddControl(button);
+
+	InitOGL(argc, argv, (ControlBase*)panel);
+
+    delete panel;
 	return 0;
 }
 
