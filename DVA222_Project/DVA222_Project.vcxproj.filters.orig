@@ -1,104 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckBox.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlBase.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphix.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MyButton.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RadioButton.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DVA222_Project.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageBox.cpp">
+    <ClCompile Include="ToggleButton.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Button.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ChackBoxGroup.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckBox.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlBase.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphix.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageBox.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MyButton.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RadioButton.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadingButtonGroup.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ToggleButton.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ControlBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyButton.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="Label.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChackBoxGroup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ReadingButtonGroup.h">
-=======
-    <ClInclude Include="Container.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Panel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CheckBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RadioButton.h">
->>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DVA222_Project.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ControlBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyButton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="Label.cpp">
-=======
-    <ClCompile Include="Container.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Panel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CheckBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RadioButton.cpp">
->>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{a951f341-b069-43b1-8623-00e4d4eedab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{310d8ae1-24ce-4b72-bef1-ba216877288a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

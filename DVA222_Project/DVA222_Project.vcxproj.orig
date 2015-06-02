@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -77,26 +77,21 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClInclude Include="ChackBoxGroup.h" />
-=======
     <ClInclude Include="Button.h" />
     <ClInclude Include="CheckBox.h" />
     <ClInclude Include="Container.h" />
->>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
     <ClInclude Include="Graphix.h" />
     <ClInclude Include="ControlBase.h" />
     <ClInclude Include="ImageBox.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="MyButton.h" />
-<<<<<<< HEAD
     <ClInclude Include="ReadingButtonGroup.h" />
-=======
     <ClInclude Include="Panel.h" />
     <ClInclude Include="RadioButton.h" />
->>>>>>> 6ba98cf112b212a74884d6a046911dd350bc6b57
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ToggleButton.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +101,7 @@
     <ClCompile Include="DVA222_Project.cpp" />
     <ClCompile Include="Graphix.cpp" />
     <ClCompile Include="ControlBase.cpp" />
+    <ClCompile Include="ImageBox.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="MyButton.cpp" />
     <ClCompile Include="Panel.cpp" />
@@ -114,6 +110,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="ToggleButton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
