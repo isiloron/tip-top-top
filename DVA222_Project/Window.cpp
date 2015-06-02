@@ -5,19 +5,22 @@
 #include "glut.h"
 #include "Window.h"
 #include "Container.h"
+#include "Label.h"
 
 using namespace std;
 
-Window::Window(int x,int y,int w,int h,string title,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
-{}
+Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
+{
+	title = new Label(t,x,y);
+}
 
 void Window::SetTitle(string t)
 {
-	title = t;
+	
 }
 string Window::GetTitle()
 {
-	return title;
+	return title->GetLabel();
 }
 void Window::SetBackroundColor(int r,int g,int b)
 {
@@ -32,7 +35,12 @@ void Window::SetBorderColor(int r,int g,int b)
 	bordercolorb = b;
 }
 
-void OnPaint()
+void Window::OnPaint()
+{
+
+}
+
+void Window::OnLoaded()
 {
 
 }

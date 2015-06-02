@@ -12,7 +12,7 @@ using namespace std;
 class Window : public Container
 {
 private:
-	string title;
+	Label *title;
 	int backcolorR,backcolorG,backcolorB;
 	int bordercolorR,bordercolorG,bordercolorb;
 
@@ -25,5 +25,5 @@ public:
 	void SetBackroundColor(int r,int g,int b);
 	void SetBorderColor(int r,int g,int b);
 	void OnPaint();
-
+	void OnLoaded();
 };
