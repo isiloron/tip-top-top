@@ -7,7 +7,7 @@
 *.userosscache
 *.sln.docstates
 *.vcxproj*
-DVA222_Project/DVA222_Project.cpp
+DVA222_Project/DVA222_Project.cpp*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
