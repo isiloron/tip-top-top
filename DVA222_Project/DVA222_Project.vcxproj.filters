@@ -34,6 +34,12 @@
     <ClCompile Include="DVA222_Project.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="ImageBox.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h">
