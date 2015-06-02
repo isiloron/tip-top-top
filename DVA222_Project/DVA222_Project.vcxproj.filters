@@ -34,7 +34,11 @@
     <ClCompile Include="DVA222_Project.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="ImageBox.cpp">
     <ClCompile Include="ToggleButton.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

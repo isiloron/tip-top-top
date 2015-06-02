@@ -8,6 +8,7 @@
 #include "MyButton.h"
 #include "Label.h"
 #include "Panel.h"
+#include "ImageBox.h"
 
 using namespace std;
 
@@ -18,18 +19,28 @@ int _tmain(int argc, char** argv)
     //From that point the control is handed over to the OpenGL window and stays there until the user closes the Window.
     //This means after calling the InitOGL function no further lines of code in the main function are executed until we close the Window.
     //------------------------------------------------------------------------------------------------------------------------------------
-    ControlBase* button = new MyButton(50,50,180,60);
+<<<<<<< HEAD
+    ControlBase* button = new MyButton(100,100,180,60);
+	ControlBase* IM = new ImageBox("TestImage.bmp",100,100,156,187);
 	ControlBase* mylabel = new Label("test123", 10, 10);
 
-<<<<<<< HEAD
-	InitOGL(argc, argv, mylabel);
-=======
-    ControlBase* button = new MyButton(10,10,190,60);
+	InitOGL(argc,argv,IM);
 
-	InitOGL(argc, argv, button);
->>>>>>> 2b8d0cdc334b8c3e734b9def549b91dbdbcda408
 	//hejhejhej
+	delete IM;
     delete button;
+=======
+
+	Panel *panel = new Panel(25, 25, 500, 500);
+	panel->SetBackgroundColor(0, 0, 0);
+
+    ControlBase* button = new MyButton(50,50,180,60);
+	panel->AddControl(button);
+
+	InitOGL(argc, argv, (ControlBase*)panel);
+
+    delete panel;
+>>>>>>> 691f2f62b6d3ed3f0c51eb768d57c631a4464374
 	return 0;
 }
 

@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -101,6 +101,7 @@
     <ClCompile Include="DVA222_Project.cpp" />
     <ClCompile Include="Graphix.cpp" />
     <ClCompile Include="ControlBase.cpp" />
+    <ClCompile Include="ImageBox.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="MyButton.cpp" />
     <ClCompile Include="Panel.cpp" />
@@ -109,6 +110,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Window.cpp" />
     <ClCompile Include="ToggleButton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
