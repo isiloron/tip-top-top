@@ -34,6 +34,9 @@
     <ClCompile Include="DVA222_Project.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="ToggleButton.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h">
@@ -79,6 +82,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ToggleButton.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

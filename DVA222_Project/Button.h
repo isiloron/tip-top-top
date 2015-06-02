@@ -10,6 +10,7 @@ private:
 	Bitmap *normal, *hover, *press;
 	ImageBox *image;
 	Label *label;
+protected:
 	bool mouseOver, pressed;
 public:
 	Button();
