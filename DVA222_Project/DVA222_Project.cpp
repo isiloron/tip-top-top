@@ -21,13 +21,14 @@ int _tmain(int argc, char** argv)
     //------------------------------------------------------------------------------------------------------------------------------------
     ControlBase* button = new MyButton(100,100,180,60);
 	ControlBase* IM = new ImageBox("TestImage.bmp",100,100,156,187);
-	ControlBase* mylabel = new Label("test123", 10, 10);
+	panel->SetBackgroundColor(0, 0, 0);
+
+	panel->AddControl(button);
 
 	InitOGL(argc,argv,IM);
 
-	//hejhejhej
+    delete panel;
 	delete IM;
-    delete button;
 	return 0;
 }
 
