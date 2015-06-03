@@ -32,5 +32,5 @@ public:
 	void OnMouseDown(int button, int x, int y);
 	void OnMouseUp(int button, int x, int y);
 	void OnMouseMove(int button, int x, int y);
-	void UpdatePosition(int dx, int dy);
+	void MovePosition(int dx, int dy);
 };

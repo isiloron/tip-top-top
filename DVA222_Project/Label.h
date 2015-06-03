@@ -23,6 +23,6 @@ public:
 
 	void SetLabelColor(int r,int g,int b);
 	virtual void OnPaint();
-	void UpdatePosition(int dx, int dy);
+	void MovePosition(int dx, int dy);
 
 };

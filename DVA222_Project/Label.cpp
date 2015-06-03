@@ -41,7 +41,7 @@ void Label::OnPaint()
 		DrawString(label,X,Y);
 }
 
-void Label::UpdatePosition(int dx, int dy)
+void Label::MovePosition(int dx, int dy)
 {
 	X = X - dx;
 	Y = Y - dy;

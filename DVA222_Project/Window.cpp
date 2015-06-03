@@ -80,8 +80,8 @@ void Window::OnMouseUp(int button, int x, int y)
 {
 	if(grab == true)
 	{
-		UpdatePosition(Xstart - x,Ystart - y);
-		title->UpdatePosition(Xstart - x,Ystart - y);
+		MovePosition(Xstart - x,Ystart - y);
+		title->MovePosition(Xstart - x,Ystart - y);
 		grab = false;
 	}
 }
@@ -96,7 +96,7 @@ void Window::OnMouseMove(int button, int x, int y)
     }
 }
 
-void Window::UpdatePosition(int dx, int dy)
+void Window::MovePosition(int dx, int dy)
 {
 	X = X - dx;
 	Y = Y - dy;

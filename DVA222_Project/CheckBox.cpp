@@ -6,13 +6,13 @@
 CheckBox::CheckBox(int locX, int locY, int width, int height)
 	:ToggleButton(locX,locY,width,height)
 {
+	//because ToggleButton is called 
 	delete normal;
 	normal = new ImageBox(locX, locY, 12, 12);
 	delete hover;
 	hover = new ImageBox(locX, locY, 12, 12);
 	delete press;
 	press = new ImageBox(locX, locY, 12, 12);
-
 	delete label;
 	label = new Label("Checkbox", locX + 16, locY + 10);
 
