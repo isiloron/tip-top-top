@@ -19,6 +19,7 @@ private:
 public:
 	Window();
 	Window(int x,int y,int w,int h,string title,int backR,int backG, int backB, int borderR,int borderG,int borderB);
+	Window(int x,int y,int w,int h,string title);
 
 	void SetTitle(string t);
 	string GetTitle();

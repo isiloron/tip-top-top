@@ -1,10 +1,9 @@
 #pragma once
-#include <string>
-#include <stdlib.h>
 #include "StdAfx.h"
 #include "Graphix.h"
 #include "glut.h"
-
+#include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -24,4 +23,5 @@ public:
 	void OnPaint();
 	void OnLoaded();
 	void SetTexture(string t);
+	void SetBitmap(Bitmap* bitmap);
 };

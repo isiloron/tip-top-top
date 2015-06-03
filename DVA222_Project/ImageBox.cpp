@@ -1,10 +1,9 @@
-#include <string>
-#include <stdlib.h>
 #include "StdAfx.h"
 #include "Graphix.h"
 #include "glut.h"
 #include "ImageBox.h"
-
+#include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -38,4 +37,10 @@ void ImageBox::OnLoaded()
 
 void ImageBox::SetTexture(string t)
 {
+}
+
+void ImageBox::SetBitmap(Bitmap* bitmap)
+{
+	delete boxtexture;
+	boxtexture = bitmap;
 }
