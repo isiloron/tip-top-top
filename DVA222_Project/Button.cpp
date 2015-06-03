@@ -5,10 +5,7 @@ using namespace std;
 
 Button::Button()
 {
-	normal = hover = press = NULL;
-	image = new ImageBox();
-	label = new Label();
-	mouseOver = pressed = false;
+
 }
 
 Button::Button(int locX, int locY, int width, int height)
@@ -16,7 +13,7 @@ Button::Button(int locX, int locY, int width, int height)
 {
 	normal = hover = press = NULL;
 	image = new ImageBox(locX, locY, width, height);
-	label = new Label(locX, locY, width, height);
+	label = new Label("Button",locX, locY);
 	mouseOver = pressed = false;
 }
 
@@ -29,54 +26,65 @@ Button::~Button()
 	delete label;
 }
 
-void Button::SetBitmaps(string normal, string hover, string press)
+void Button::LoadBitmaps(string normal, string hover, string press)
 {
-	SetNormalBitmap(normal);
-	SetHoverBitmap(hover);
-	SetPressBitmap(press);
+	LoadNormalBitmap(normal);
+	LoadHoverBitmap(hover);
+	LoadPressBitmap(press);
 }
 
-void Button::SetNormalBitmap(string filename)
+void Button::LoadNormalBitmap(string filename)
 {
 	delete normal;
 	normal = new Bitmap(filename);
 }
 
-void Button::SetHoverBitmap(string filename)
+void Button::LoadHoverBitmap(string filename)
 {
 	delete hover;
 	hover = new Bitmap(filename);
 }
 
-void Button::SetPressBitmap(string filename)
+void Button::LoadPressBitmap(string filename)
 {
 	delete press;
 	press = new Bitmap(filename);
 }
 
+void Button::SetLabel(string text)
+{
+	if (label != NULL)
+		label->SetLabel(text);
+}
+
 void Button::OnLoaded()
 {
-	image->OnLoaded();
-	label->OnLoaded();
+	if (image != NULL)
+		image->OnLoaded();
+	if (label != NULL)
+		label->OnLoaded();
 }
 
 void Button::OnPaint()
 {
-	if (pressed)
+	if (image != NULL)
 	{
-		image->SetBitmap(press);
+		if (pressed)
+		{
+			image->SetBitmap(press);
+		}
+		else if (mouseOver)
+		{
+			image->SetBitmap(hover);
+		}
+		else
+		{
+			image->SetBitmap(normal);
+		}
+		image->OnPaint();
 	}
-	else if (mouseOver)
-	{
-		image->SetBitmap(hover);
-	}
-	else
-	{
-		image->SetBitmap(normal);
-	}
-
-	image->OnPaint();
-	label->OnPaint();
+	if (label != NULL)
+		label->OnPaint();
 }
 
 void Button::OnMouseDown(int button, int x, int y)

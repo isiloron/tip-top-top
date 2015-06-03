@@ -10,6 +10,7 @@
 
 ControlBase::ControlBase()
 {			 	
+
 }
 
 ControlBase::ControlBase(int x, int y, int w, int h)
