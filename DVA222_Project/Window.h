@@ -15,9 +15,9 @@ private:
 	Label *title;
 	int backcolorR,backcolorG,backcolorB;
 	int bordercolorR,bordercolorG,bordercolorb;
+	bool grab,hover;
 
 public:
-	Window();
 	Window(int x,int y,int w,int h,string title,int backR,int backG, int backB, int borderR,int borderG,int borderB);
 	Window(int x,int y,int w,int h,string title);
 
@@ -27,5 +27,8 @@ public:
 	void SetBorderColor(int r,int g,int b);
 	void OnPaint();
 	void OnLoaded();
-	void OnMove();
+
+	void OnMouseDown(int button, int x, int y);
+	void OnMouseUp(int button, int x, int y);
+	void OnMouseMove(int button, int x, int y);
 };

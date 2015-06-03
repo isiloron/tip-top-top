@@ -1,11 +1,12 @@
-#include <string>
-#include <stdlib.h>
+
 #include "StdAfx.h"
 #include "Graphix.h"
 #include "glut.h"
 #include "Window.h"
 #include "Container.h"
 #include "Label.h"
+#include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 	bordercolorR = borderR;
 	bordercolorG = borderG;
 	bordercolorb = borderB;
+	grab = hover = false;
 }
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
@@ -25,6 +27,7 @@ Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 	title = new Label(t,x-5,y+1);
 	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
+	grab = hover=  false;
 }
 
 void Window::SetTitle(string t)
@@ -63,7 +66,21 @@ void Window::OnLoaded()
 
 }
 
-void Window::OnMove()
+void Window::OnMouseDown(int button, int x, int y)
 {
+	if(hit && button==MOUSE_LEFT)
+    grab = true;
+}
 
+void Window::OnMouseUp(int button, int x, int y)
+{}
+
+void Window::OnMouseMove(int button, int x, int y)
+{
+	if (x>X && x < X+Width && y>Y && y < Y+Height)
+		hover = true;
+	else
+    {
+		grab = hover= false;
+    }
 }
