@@ -27,4 +27,5 @@ public:
 	void SetBorderColor(int r,int g,int b);
 	void OnPaint();
 	void OnLoaded();
+	void OnMove();
 };
