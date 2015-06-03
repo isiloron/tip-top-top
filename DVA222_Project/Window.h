@@ -15,7 +15,7 @@ private:
 	Label *title;
 	int backcolorR,backcolorG,backcolorB;
 	int bordercolorR,bordercolorG,bordercolorb;
-	bool grab,hover;
+	bool grab,hoverBar, hoverContents;
 	int Xstart,Ystart,Xend,Yend;
 
 public:
