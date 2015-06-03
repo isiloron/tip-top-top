@@ -43,8 +43,7 @@ void Label::OnPaint()
 
 void Label::UpdatePosition(int dx, int dy)
 {
-	X = X - dx;
-	Y = Y - dy;
+	ControlBase::UpdatePosition(dx,dy);
 }
 
 	

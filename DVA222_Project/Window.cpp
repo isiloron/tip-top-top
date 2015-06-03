@@ -80,24 +80,31 @@ void Window::OnMouseUp(int button, int x, int y)
 {
 	if(grab == true)
 	{
-		UpdatePosition(Xstart - x,Ystart - y);
-		title->UpdatePosition(Xstart - x,Ystart - y);
+		UpdatePosition(x - Xstart, y-Ystart);
 		grab = false;
 	}
 }
 
 void Window::OnMouseMove(int button, int x, int y)
 {
-	if (x>X && x < X+Width && y >Y-15 && y < Y)
+	if(grab == true)
+	{
+		UpdatePosition(x - Xstart, y-Ystart);
+		Xstart = x;
+		Ystart = y;
+	}
+	else if (x>X && x < X+Width && y >Y-15 && y < Y)
 		hover = true;
 	else
     {
 		hover= false;
     }
+	
 }
 
 void Window::UpdatePosition(int dx, int dy)
 {
-	X = X - dx;
-	Y = Y - dy;
+	ControlBase::UpdatePosition(dx,dy);
+	title->UpdatePosition(dx, dy);
+	Container::UpdatePosition(dx,dy);
 }
