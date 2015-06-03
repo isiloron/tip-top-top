@@ -11,7 +11,7 @@ using namespace std;
 
 Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
 {
-	title = new Label(t,x,y);
+	title = new Label(t,x-5,y);
 	backcolorR = backR;
 	backcolorG = backG;
 	backcolorB = backB;
@@ -22,7 +22,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 {
-	title = new Label(t,x,y);
+	title = new Label(t,x-5,y+1);
 	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
 }
@@ -50,13 +50,20 @@ void Window::SetBorderColor(int r,int g,int b)
 
 void Window::OnPaint()
 {
+	title->OnPaint();
 	SetColor(backcolorR,backcolorG,backcolorB);
 	FillRectangle(X,Y,Width,Height);
 	SetColor(bordercolorR,bordercolorG,bordercolorb);
 	DrawRectangle(X,Y,Width,Height);
+	DrawRectangle(X,Y-15,Width,15);
 }
 
 void Window::OnLoaded()
+{
+
+}
+
+void Window::OnMove()
 {
 
 }
