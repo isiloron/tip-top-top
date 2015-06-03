@@ -16,6 +16,7 @@ private:
 	int backcolorR,backcolorG,backcolorB;
 	int bordercolorR,bordercolorG,bordercolorb;
 	bool grab,hover;
+	int Xstart,Ystart,Xend,Yend;
 
 public:
 	Window(int x,int y,int w,int h,string title,int backR,int backG, int backB, int borderR,int borderG,int borderB);
@@ -31,4 +32,5 @@ public:
 	void OnMouseDown(int button, int x, int y);
 	void OnMouseUp(int button, int x, int y);
 	void OnMouseMove(int button, int x, int y);
+	void UpdatePosition(int dx, int dy);
 };

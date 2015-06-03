@@ -68,19 +68,36 @@ void Window::OnLoaded()
 
 void Window::OnMouseDown(int button, int x, int y)
 {
-	if(hit && button==MOUSE_LEFT)
-    grab = true;
+	if(hover && button==MOUSE_LEFT)
+	{
+		grab = true;
+		Xstart = x;
+		Ystart = y;
+	}
 }
 
 void Window::OnMouseUp(int button, int x, int y)
-{}
+{
+	if(grab == true)
+	{
+		UpdatePosition(Xstart - x,Ystart - y);
+		title->UpdatePosition(Xstart - x,Ystart - y);
+		grab = false;
+	}
+}
 
 void Window::OnMouseMove(int button, int x, int y)
 {
-	if (x>X && x < X+Width && y>Y && y < Y+Height)
+	if (x>X && x < X+Width && y >Y-15 && y < Y)
 		hover = true;
 	else
     {
-		grab = hover= false;
+		hover= false;
     }
+}
+
+void Window::UpdatePosition(int dx, int dy)
+{
+	X = X - dx;
+	Y = Y - dy;
 }

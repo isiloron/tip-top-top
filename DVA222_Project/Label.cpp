@@ -45,4 +45,10 @@ void Label::OnPaint()
 		DrawString(label,posx,posy);
 }
 
+void Label::UpdatePosition(int dx, int dy)
+{
+	X = X - dx;
+	Y = Y - dy;
+}
+
 	
