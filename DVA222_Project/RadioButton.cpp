@@ -6,14 +6,14 @@ RadioButton::RadioButton(int locX, int locY, int width, int height)
 :ToggleButton(locX, locY, width, height)
 {
 	delete normal;
-	normal = new ImageBox(locX, locY, 10, 10);
+	normal = new ImageBox(locX, locY, 12, 12);
 	delete hover;
-	hover = new ImageBox(locX, locY, 10, 10);
+	hover = new ImageBox(locX, locY, 12, 12);
 	delete press;
-	press = new ImageBox(locX, locY, 10, 10);
+	press = new ImageBox(locX, locY, 12, 12);
 
 	delete label;
-	label = new Label("Radiobutton", locX + 10, locY);
+	label = new Label("Radiobutton", locX + 16, locY+10);
 
 	LoadBitmaps("RadioButtonNormal.bmp", "RadioButtonHover.bmp", "RadioButtonPressed.bmp");
 
@@ -22,7 +22,7 @@ RadioButton::RadioButton(int locX, int locY, int width, int height)
 
 void RadioButton::OnMouseMove(int button, int x, int y)
 {
-	if (x > X && x< X + 10 && y>Y && y < Y + 10)
+	if (x > X && x< X + 12 && y>Y && y < Y + 12)
 	{
 		mouseOver = true;
 	}
