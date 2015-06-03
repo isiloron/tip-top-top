@@ -12,7 +12,7 @@ using namespace std;
 
 Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
 {
-	title = new Label(t,x-5,y);
+	title = new Label(t,x+2,y-5);
 	backcolorR = backR;
 	backcolorG = backG;
 	backcolorB = backB;
@@ -24,7 +24,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 {
-	title = new Label(t,x-5,y+1);
+	title = new Label(t,x+2,y-5);
 	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
 	grab = hover=  false;
@@ -80,24 +80,31 @@ void Window::OnMouseUp(int button, int x, int y)
 {
 	if(grab == true)
 	{
-		MovePosition(Xstart - x,Ystart - y);
-		title->MovePosition(Xstart - x,Ystart - y);
+		MovePosition(x - Xstart, y-Ystart);
 		grab = false;
 	}
 }
 
 void Window::OnMouseMove(int button, int x, int y)
 {
-	if (x>X && x < X+Width && y >Y-15 && y < Y)
+	if(grab == true)
+	{
+		MovePosition(x - Xstart, y - Ystart);
+		Xstart = x;
+		Ystart = y;
+	}
+	else if (x>X && x < X+Width && y >Y-15 && y < Y)
 		hover = true;
 	else
     {
 		hover= false;
     }
+	
 }
 
 void Window::MovePosition(int dx, int dy)
 {
-	X = X - dx;
-	Y = Y - dy;
+	ControlBase::MovePosition(dx, dy);
+	title->MovePosition(dx, dy);
+	Container::MovePosition(dx, dy);
 }
