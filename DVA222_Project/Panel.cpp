@@ -28,3 +28,10 @@ void Panel::OnPaint(void)
 
 	Container::OnPaint();
 }
+
+void Panel::UpdatePosition(int dx, int dy)
+{
+	X += dx;
+	Y += dy;
+	Container::UpdatePosition(dx, dy);
+}

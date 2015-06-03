@@ -13,5 +13,6 @@ public:
 
 	void SetBackgroundColor(int r, int g, int b);
 
-	void OnPaint(void);
+	virtual void OnPaint(void);
+	virtual void UpdatePosition(int dx, int dy);
 };
