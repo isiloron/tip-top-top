@@ -43,7 +43,7 @@ void Label::OnPaint()
 
 void Label::MovePosition(int dx, int dy)
 {
-	ControlBase::UpdatePosition(dx,dy);
+	ControlBase::MovePosition(dx, dy);
 }
 
 	
