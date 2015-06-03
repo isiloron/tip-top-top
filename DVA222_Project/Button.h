@@ -7,8 +7,8 @@
 class Button : public ControlBase
 {
 protected:
-	Bitmap *normal, *hover, *press;
 	ImageBox *image;
+	ImageBox *normal, *hover, *press;
 	Label *label;
 	bool mouseOver, pressed;
 public:
@@ -25,10 +25,8 @@ public:
 
 	virtual void OnLoaded();
 	virtual void OnPaint(void);
-	virtual void OnKeyboard(unsigned char key, int x, int y);
 	virtual void OnMouseDown(int button, int x, int y);
 	virtual void OnMouseUp(int button, int x, int y);
 	virtual void OnMouseMove(int button, int x, int y);
-	virtual void OnResize(int width, int height);
 
 };
