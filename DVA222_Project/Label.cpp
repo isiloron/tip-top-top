@@ -10,6 +10,12 @@ using namespace std;
 Label::Label()
 {}
 
+Label::Label(int x,int y)
+{
+	posx = x;
+	posy = y;
+}
+
 Label::Label(string l,int x ,int y)
 {
 	label = l;

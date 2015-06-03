@@ -17,6 +17,7 @@ private:
 
 public:
 	Label();
+	Label(int x,int y);
 	Label(string l,int x,int y);
 
 	string GetLabel();

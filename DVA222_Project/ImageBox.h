@@ -16,6 +16,7 @@ private:
 
 public:
 	ImageBox();
+	ImageBox(int x,int y,int w,int h);
 	ImageBox(string path,int x,int y,int w,int h);
 
 	~ImageBox();

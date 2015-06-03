@@ -10,6 +10,12 @@ using namespace std;
 
 ImageBox::ImageBox(){}
 
+ImageBox::ImageBox(int x,int y,int w,int h):ControlBase(x,y,w,h)
+{
+
+}
+
+
 ImageBox::ImageBox(string path, int x,int y,int w,int h): ControlBase(x,y,w,h)
 {
 	texturepath = path;
