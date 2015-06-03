@@ -37,6 +37,7 @@ void ImageBox::OnLoaded()
 
 void ImageBox::SetTexture(string t)
 {
+	texturepath = t;
 }
 
 void ImageBox::SetBitmap(Bitmap* bitmap)
