@@ -4,9 +4,6 @@
 
 using namespace std;
 
-Container::Container()
-{
-}
 
 Container::Container(int locX, int locY, int width, int height)
 	: ControlBase(locX, locY, width, height)

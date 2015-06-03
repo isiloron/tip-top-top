@@ -4,10 +4,6 @@
 
 using namespace std;
 
-Panel::Panel()
-{
-}
-
 Panel::Panel(int locX, int locY, int width, int height)
 	: Container(locX, locY, width, height)
 {
@@ -31,7 +27,6 @@ void Panel::OnPaint(void)
 
 void Panel::UpdatePosition(int dx, int dy)
 {
-	X += dx;
-	Y += dy;
+	ControlBase::UpdatePosition(dx, dy);
 	Container::UpdatePosition(dx, dy);
 }

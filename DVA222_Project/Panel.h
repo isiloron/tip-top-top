@@ -8,7 +8,6 @@ private:
 	int r, g, b;
 
 public:
-	Panel();
 	Panel(int locX, int locY, int width, int height);
 
 	void SetBackgroundColor(int r, int g, int b);
