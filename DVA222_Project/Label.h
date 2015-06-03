@@ -12,8 +12,6 @@ class Label : public ControlBase
 {
 private:
 	string label;
-	int posx;
-	int posy;
 
 public:
 	Label();

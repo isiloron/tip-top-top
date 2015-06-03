@@ -11,11 +11,11 @@ ImageBox::ImageBox(){}
 
 ImageBox::ImageBox(int x,int y,int w,int h):ControlBase(x,y,w,h)
 {
-
+	boxtexture = NULL;
 }
 
 
-ImageBox::ImageBox(string path, int x,int y,int w,int h): ControlBase(x,y,w,h)
+ImageBox::ImageBox(string path, int x,int y,int w,int h): ImageBox(x,y,w,h)
 {
 	texturepath = path;
 }

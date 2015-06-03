@@ -10,17 +10,13 @@ using namespace std;
 Label::Label()
 {}
 
-Label::Label(int x,int y)
+Label::Label(int x, int y) : ControlBase(x,y,0,0)
 {
-	posx = x;
-	posy = y;
 }
 
-Label::Label(string l,int x ,int y)
+Label::Label(string l, int x, int y) :Label(x, y)
 {
 	label = l;
-	posx = x;
-	posy = y;
 }
 
 
@@ -42,7 +38,7 @@ void Label::SetLabelColor(int r,int g,int b)
 void Label::OnPaint()
 {
 		SetColor(0,0,0);
-		DrawString(label,posx,posy);
+		DrawString(label,X,Y);
 }
 
 	

@@ -1,10 +1,6 @@
 #include "stdafx.h"
 #include "RadioButton.h"
 
-RadioButton::RadioButton()
-{
-
-}
 
 RadioButton::RadioButton(int locX, int locY, int width, int height)
 :ToggleButton(locX, locY, width, height)

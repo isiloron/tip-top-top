@@ -10,7 +10,6 @@ class Container : public ControlBase
 private:
 	vector<ControlBase*> controlList; // The order of the elements in this list represents the Z value. The last added control will be in front.
 public:
-	Container();
 	Container(int locX, int locY, int width, int height);
 	~Container();
 

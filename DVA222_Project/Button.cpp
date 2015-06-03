@@ -3,10 +3,6 @@
 
 using namespace std;
 
-Button::Button()
-{
-
-}
 
 Button::Button(int locX, int locY, int width, int height)
 	: ControlBase(locX, locY, width, height)
@@ -61,8 +57,12 @@ void Button::SetLabel(string text)
 
 void Button::OnLoaded()
 {
-	if (image != NULL)
-		image->OnLoaded();
+	if (normal != NULL)
+		normal->OnLoaded();
+	if (hover != NULL)
+		hover->OnLoaded();
+	if (press != NULL)
+		press->OnLoaded();
 	if (label != NULL)
 		label->OnLoaded();
 }
@@ -102,7 +102,7 @@ void Button::OnMouseUp(int button, int x, int y)
 
 void Button::OnMouseMove(int button, int x, int y)
 {
-	if (x > X && x<X + Width && y>Y && y > Y + Height)
+	if (x > X && x<X + Width && y>Y && y < Y + Height)
 	{
 		mouseOver = true;
 	}
@@ -110,4 +110,13 @@ void Button::OnMouseMove(int button, int x, int y)
 	{
 		mouseOver = pressed = false;
 	}
+}
+
+void Button::UpdatePosition(int dx, int dy)
+{
+	ControlBase::UpdatePosition(dx, dy);
+	normal->UpdatePosition(dx, dy);
+	hover->UpdatePosition(dx, dy);
+	press->UpdatePosition(dx, dy);
+	label->UpdatePosition(dx, dy);
 }
