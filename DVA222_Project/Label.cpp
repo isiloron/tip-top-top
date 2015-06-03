@@ -14,7 +14,7 @@ Label::Label(int x, int y) : ControlBase(x,y,0,0)
 {
 }
 
-Label::Label(string l, int x, int y) :Label(x, y)
+Label::Label(string l, int x, int y) :ControlBase(x, y,0,0)
 {
 	label = l;
 }

@@ -12,7 +12,7 @@ using namespace std;
 
 Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
 {
-	title = new Label(t,x-5,y);
+	title = new Label(t,x+2,y-5);
 	backcolorR = backR;
 	backcolorG = backG;
 	backcolorB = backB;
@@ -24,7 +24,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 {
-	title = new Label(t,x-5,y+1);
+	title = new Label(t,x+2,y-5);
 	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
 	grab = hover=  false;
