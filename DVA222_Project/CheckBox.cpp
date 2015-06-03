@@ -9,12 +9,19 @@ CheckBox::CheckBox()
 CheckBox::CheckBox(int locX, int locY, int width, int height)
 	:ToggleButton(locX,locY,width,height)
 {
-	delete image;
-	image = new ImageBox(locX, locY, 10, 10);
+	delete normal;
+	normal = new ImageBox(locX, locY, 10, 10);
+	delete hover;
+	hover = new ImageBox(locX, locY, 10, 10);
+	delete press;
+	press = new ImageBox(locX, locY, 10, 10);
+
 	delete label;
 	label = new Label("Checkbox",locX + 10, locY);
+
 	LoadBitmaps("CheckBoxNormal.bmp", "CheckBoxHover.bmp", "CheckBoxPressed.bmp");
-	image->SetBitmap(normal);
+
+	image=normal;
 }
 
 void CheckBox::OnMouseMove(int button, int x, int y)

@@ -13,8 +13,8 @@ Button::Button(int locX, int locY, int width, int height)
 {
 	normal = new ImageBox(locX, locY, width, height);
 	hover = new ImageBox(locX, locY, width, height);
-	press = NULL;
-	image = new ImageBox(locX, locY, width, height);
+	press = new ImageBox(locX, locY, width, height);
+	image = normal;
 	label = new Label("Button",locX, locY);
 	mouseOver = pressed = false;
 }
@@ -37,20 +37,20 @@ void Button::LoadBitmaps(string normal, string hover, string press)
 
 void Button::LoadNormalBitmap(string filename)
 {
-	delete normal;
-	normal = new Bitmap(filename);
+	if (normal != NULL)
+		normal->SetTexture(filename);
 }
 
 void Button::LoadHoverBitmap(string filename)
 {
-	delete hover;
-	hover = new Bitmap(filename);
+	if (hover != NULL)
+		hover->SetTexture(filename);
 }
 
 void Button::LoadPressBitmap(string filename)
 {
-	delete press;
-	press = new Bitmap(filename);
+	if (press != NULL)
+		press->SetTexture(filename);
 }
 
 void Button::SetLabel(string text)
@@ -69,22 +69,20 @@ void Button::OnLoaded()
 
 void Button::OnPaint()
 {
-	if (image != NULL)
+	if (pressed)
 	{
-		if (pressed)
-		{
-			image->SetBitmap(press);
-		}
-		else if (mouseOver)
-		{
-			image->SetBitmap(hover);
-		}
-		else
-		{
-			image->SetBitmap(normal);
-		}
-		image->OnPaint();
+		image = press;
 	}
+	else if (mouseOver)
+	{
+		image = hover;
+	}
+	else
+	{
+		image = normal;
+	}
+	image->OnPaint();
+
 	if (label != NULL)
 		label->OnPaint();
 }

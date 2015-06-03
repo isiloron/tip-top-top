@@ -9,12 +9,19 @@ RadioButton::RadioButton()
 RadioButton::RadioButton(int locX, int locY, int width, int height)
 :ToggleButton(locX, locY, width, height)
 {
-	delete image;
-	image = new ImageBox(locX, locY, 10, 10);
+	delete normal;
+	normal = new ImageBox(locX, locY, 10, 10);
+	delete hover;
+	hover = new ImageBox(locX, locY, 10, 10);
+	delete press;
+	press = new ImageBox(locX, locY, 10, 10);
+
 	delete label;
-	label = new Label("Radiobutton",locX + 10, locY);
+	label = new Label("Radiobutton", locX + 10, locY);
+
 	LoadBitmaps("RadioButtonNormal.bmp", "RadioButtonHover.bmp", "RadioButtonPressed.bmp");
-	image->SetBitmap(normal);
+
+	image = normal;
 }
 
 void RadioButton::OnMouseMove(int button, int x, int y)
