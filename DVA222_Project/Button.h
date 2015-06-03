@@ -6,21 +6,22 @@
 
 class Button : public ControlBase
 {
-private:
+protected:
 	Bitmap *normal, *hover, *press;
 	ImageBox *image;
 	Label *label;
-protected:
 	bool mouseOver, pressed;
 public:
 	Button();
 	Button(int locX, int locY, int width, int height);
 	~Button();
 
-	void SetBitmaps(string normal, string hover, string press);
-	void SetNormalBitmap(string filename);
-	void SetHoverBitmap(string filename);
-	void SetPressBitmap(string filename);
+	void LoadBitmaps(string normal, string hover, string press);
+	void LoadNormalBitmap(string filename);
+	void LoadHoverBitmap(string filename);
+	void LoadPressBitmap(string filename);
+
+	void SetLabel(string text);
 
 	virtual void OnLoaded();
 	virtual void OnPaint(void);

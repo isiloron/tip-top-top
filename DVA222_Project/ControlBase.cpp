@@ -10,6 +10,7 @@
 
 ControlBase::ControlBase()
 {			 	
+
 }
 
 ControlBase::ControlBase(int x, int y, int w, int h)
@@ -53,5 +54,10 @@ void ControlBase::OnMouseMove(int button, int x, int y)
 
 void ControlBase::OnResize(int width, int height)
 {
+}
+
+void ControlBase::UpdatePosition(int dx, int dy)
+{
+
 }
 

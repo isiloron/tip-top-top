@@ -2,7 +2,15 @@
 #include "ToggleButton.h"
 
 ToggleButton::ToggleButton()
-{}
+{
+
+}
+
+ToggleButton::ToggleButton(int locX, int locY, int width, int height)
+: Button(locX, locY, width, height)
+{
+
+}
 
 void ToggleButton::OnMouseDown(int button, int x, int y)
 {

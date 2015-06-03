@@ -6,18 +6,12 @@ using namespace std;
 
 Panel::Panel()
 {
-	r = g = b = 255;
 }
 
 Panel::Panel(int locX, int locY, int width, int height)
 	: Container(locX, locY, width, height)
 {
 	r = g = b = 255;
-}
-
-Panel::~Panel()
-{
-
 }
 
 void Panel::SetBackgroundColor(int r, int g, int b)
@@ -33,4 +27,11 @@ void Panel::OnPaint(void)
 	FillRectangle(X, Y, Width, Height);
 
 	Container::OnPaint();
+}
+
+void Panel::UpdatePosition(int dx, int dy)
+{
+	X += dx;
+	Y += dy;
+	Container::UpdatePosition(dx, dy);
 }

@@ -10,9 +10,9 @@ private:
 public:
 	Panel();
 	Panel(int locX, int locY, int width, int height);
-	~Panel();
 
 	void SetBackgroundColor(int r, int g, int b);
 
-	void OnPaint(void);
+	virtual void OnPaint(void);
+	virtual void UpdatePosition(int dx, int dy);
 };
