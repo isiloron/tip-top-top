@@ -11,7 +11,9 @@ Button::Button()
 Button::Button(int locX, int locY, int width, int height)
 	: ControlBase(locX, locY, width, height)
 {
-	normal = hover = press = NULL;
+	normal = new ImageBox(locX, locY, width, height);
+	hover = new ImageBox(locX, locY, width, height);
+	press = NULL;
 	image = new ImageBox(locX, locY, width, height);
 	label = new Label("Button",locX, locY);
 	mouseOver = pressed = false;

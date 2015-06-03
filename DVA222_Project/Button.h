@@ -7,8 +7,8 @@
 class Button : public ControlBase
 {
 protected:
-	Bitmap *normal, *hover, *press;
 	ImageBox *image;
+	ImageBox *normal, *hover, *press;
 	Label *label;
 	bool mouseOver, pressed;
 public:
