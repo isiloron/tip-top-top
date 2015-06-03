@@ -23,7 +23,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 {
 	title = new Label(t,x,y);
-	backcolorR = backcolorG = backcolorB = 255;
+	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
 }
 
