@@ -5,7 +5,7 @@ using namespace std;
 
 
 Button::Button(int locX, int locY, int width, int height)
-	: ControlBase(locX, locY, width, height)
+	: ControlBaseExtended(locX, locY, width, height)
 {
 	normal = new ImageBox(locX, locY, width, height);
 	hover = new ImageBox(locX, locY, width, height);
@@ -111,7 +111,7 @@ void Button::OnMouseMove(int button, int x, int y)
 
 void Button::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx, dy);
+	ControlBaseExtended::MovePosition(dx, dy);
 	normal->MovePosition(dx, dy);
 	hover->MovePosition(dx, dy);
 	press->MovePosition(dx, dy);

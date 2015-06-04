@@ -1,17 +1,16 @@
 #pragma once
 
-#include "ControlBase.h"
+#include "ControlBaseExtended.h"
 
 using namespace std;
 
-class Label : public ControlBase
+class Label : public ControlBaseExtended
 {
 private:
 	string label;
 	int textColorR,textColorG,textColorB;
 
 public:
-	Label();
 	Label(int x,int y);
 	Label(string l,int x,int y);
 

@@ -40,7 +40,7 @@ void ToggleButtonGroup::OnLoaded()
 }
 void ToggleButtonGroup::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx,dy);
+	ControlBaseExtended::MovePosition(dx,dy);
 	title->MovePosition(dx,dy);
 	Container::MovePosition(dx,dy);
 }

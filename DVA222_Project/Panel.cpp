@@ -27,6 +27,6 @@ void Panel::OnPaint(void)
 
 void Panel::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx, dy);
+	ControlBaseExtended::MovePosition(dx, dy);
 	Container::MovePosition(dx, dy);
 }

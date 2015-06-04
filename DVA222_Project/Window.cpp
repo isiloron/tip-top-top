@@ -120,7 +120,7 @@ void Window::OnMouseMove(int button, int x, int y)
 
 void Window::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx, dy);
+	ControlBaseExtended::MovePosition(dx, dy);
 	title->MovePosition(dx, dy);
 	Container::MovePosition(dx, dy);
 }

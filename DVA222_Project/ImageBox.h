@@ -1,17 +1,16 @@
 #pragma once
-#include "ControlBase.h"
+#include "ControlBaseExtended.h"
 #include "Graphix.h"
 
 using namespace std;
 
-class ImageBox : public ControlBase
+class ImageBox : public ControlBaseExtended
 {
 private:
 	Bitmap *boxtexture;
 	string texturepath;
 
 public:
-	ImageBox();
 	ImageBox(int x,int y,int w,int h);
 	ImageBox(string path,int x,int y,int w,int h);
 

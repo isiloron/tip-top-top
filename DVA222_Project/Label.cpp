@@ -4,15 +4,12 @@
 
 using namespace std;
 
-Label::Label()
-{}
-
-Label::Label(int x, int y) : ControlBase(x,y,0,0)
+Label::Label(int x, int y) : ControlBaseExtended(x,y,0,0)
 {
 	textColorR = textColorG = textColorB = 0;
 }
 
-Label::Label(string l, int x, int y) :ControlBase(x, y,0,0)
+Label::Label(string l, int x, int y) : ControlBaseExtended(x, y, 0, 0)
 {
 	textColorR = textColorG = textColorB = 0;
 	label = l;
@@ -44,7 +41,7 @@ void Label::OnPaint()
 
 void Label::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx, dy);
+	ControlBaseExtended::MovePosition(dx, dy);
 }
 
 	

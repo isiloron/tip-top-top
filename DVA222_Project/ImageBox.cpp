@@ -4,15 +4,13 @@
 
 using namespace std;
 
-ImageBox::ImageBox(){}
-
-ImageBox::ImageBox(int x,int y,int w,int h):ControlBase(x,y,w,h)
+ImageBox::ImageBox(int x,int y,int w,int h):ControlBaseExtended(x,y,w,h)
 {
 	boxtexture = NULL;
 }
 
 
-ImageBox::ImageBox(string path, int x,int y,int w,int h):ControlBase(x,y,w,h)
+ImageBox::ImageBox(string path, int x, int y, int w, int h) :ControlBaseExtended(x, y, w, h)
 {
 	boxtexture = NULL;
 	texturepath = path;

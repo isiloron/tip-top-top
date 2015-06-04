@@ -3,7 +3,7 @@
 #include "Label.h"
 #include "ImageBox.h"
 
-class Button : public ControlBase
+class Button : public ControlBaseExtended
 {
 protected:
 	ImageBox *image;

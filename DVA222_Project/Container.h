@@ -1,18 +1,18 @@
 #pragma once
-#include "ControlBase.h"
+#include "ControlBaseExtended.h"
 #include <vector>
 
 using namespace std;
 
-class Container : public ControlBase
+class Container : public ControlBaseExtended
 {
 protected:
-	vector<ControlBase*> controlList; // The order of the elements in this list represents the Z value. The last added control will be in front.
+	vector<ControlBaseExtended*> controlList; // The order of the elements in this list represents the Z value. The last added control will be in front.
 public:
 	Container(int locX, int locY, int width, int height);
 	~Container();
 
-	void AddControl(ControlBase *control);
+	void AddControl(ControlBaseExtended *control);
 
 	virtual void OnLoaded();
 	virtual void OnPaint();
