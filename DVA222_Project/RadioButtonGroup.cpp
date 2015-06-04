@@ -15,6 +15,7 @@ RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):Con
 	title = new Label(initTitle,x,y-3);
 	numberofboxes = 1;
 	borderR = borderG = borderB = 0;
+	currentlyPressed = NULL;
 }
 
 void RadioButtonGroup::AddRadioButton(string Radiolabel)
@@ -23,6 +24,7 @@ void RadioButtonGroup::AddRadioButton(string Radiolabel)
 	newRadio->SetLabel(Radiolabel);
 	AddControl(newRadio);
 	numberofboxes++;
+	currentlyPressed = NULL;
 }
 
 void RadioButtonGroup::SetTitle(string t)
@@ -52,6 +54,31 @@ void RadioButtonGroup::OnLoaded()
 	title->OnLoaded();
 	Container::OnLoaded();
 }
+
+void RadioButtonGroup::OnMouseDown(int button, int x, int y)
+{
+	Container::OnMouseDown(button,x,y);
+
+	RadioButton* newPressed = NULL;
+	for(size_t i = 0; i<controlList.size();i++)
+	{
+		RadioButton* button = (RadioButton*)controlList[i];
+		if(button->IsPressed() && button != currentlyPressed)
+		{
+			newPressed = button;
+		}
+	}
+
+	if(newPressed != currentlyPressed)
+	{
+		if(currentlyPressed != NULL && currentlyPressed->IsPressed())
+		{
+			currentlyPressed->SetPressed(false);
+		}
+		currentlyPressed = newPressed;
+	}
+}
+
 void RadioButtonGroup::MovePosition(int dx, int dy)
 {
 	ControlBase::MovePosition(dx,dy);

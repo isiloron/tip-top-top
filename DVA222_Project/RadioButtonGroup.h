@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include "Container.h"
 #include "Label.h"
+#include "RadioButton.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ private:
 	Label* title;
 	int numberofboxes;
 	int borderR,borderG,borderB;
+	RadioButton* currentlyPressed;
 
 public:
 	RadioButtonGroup(string t,int x,int y,int w,int h);
@@ -26,4 +28,6 @@ public:
 	void OnPaint();
 	void OnLoaded();
 	void MovePosition(int dx, int dy);
+	void OnMouseDown(int button, int x, int y);
+
 };
