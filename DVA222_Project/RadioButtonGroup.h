@@ -25,5 +25,5 @@ public:
 	void SetBorderColor(int r,int g,int b);
 	void OnPaint();
 	void OnLoaded();
-	void UpdatePosition(int dx, int dy);
+	void MovePosition(int dx, int dy);
 };

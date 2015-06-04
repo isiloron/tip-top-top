@@ -52,9 +52,9 @@ void RadioButtonGroup::OnLoaded()
 	title->OnLoaded();
 	Container::OnLoaded();
 }
-void RadioButtonGroup::UpdatePosition(int dx, int dy)
+void RadioButtonGroup::MovePosition(int dx, int dy)
 {
-	ControlBase::UpdatePosition(dx,dy);
-	title->UpdatePosition(dx,dy);
-	Container::UpdatePosition(dx,dy);
+	ControlBase::MovePosition(dx,dy);
+	title->MovePosition(dx,dy);
+	Container::MovePosition(dx,dy);
 }
