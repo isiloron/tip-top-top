@@ -63,14 +63,21 @@ void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 		}
 	}
 
-	if(newPressed != NULL && newPressed != currentlyPressed)
+	if (currentlyPressed == NULL && newPressed != NULL)
 	{
-		if(currentlyPressed != NULL)
-		{
-			currentlyPressed->SetPressed(false);
-		}
 		currentlyPressed = newPressed;
 	}
+	else if (currentlyPressed != NULL && newPressed == NULL)
+	{
+		if (!currentlyPressed->IsPressed())
+			currentlyPressed = NULL;
+	}
+	else if (currentlyPressed != NULL && newPressed != NULL)
+	{
+		currentlyPressed->SetPressed(false);
+		currentlyPressed = newPressed;
+	}
+
 }
 
 void RadioButtonGroup::MovePosition(int dx, int dy)
