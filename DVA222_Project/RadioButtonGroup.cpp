@@ -63,9 +63,9 @@ void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 		}
 	}
 
-	if(newPressed != currentlyPressed)
+	if(newPressed != NULL && newPressed != currentlyPressed)
 	{
-		if(currentlyPressed != NULL && currentlyPressed->IsPressed())
+		if(currentlyPressed != NULL)
 		{
 			currentlyPressed->SetPressed(false);
 		}
