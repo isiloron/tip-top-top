@@ -1,9 +1,5 @@
 #include "StdAfx.h"
-#include "Graphix.h"
-#include "glut.h"
 #include "ImageBox.h"
-#include <string>
-#include <stdlib.h>
 
 using namespace std;
 

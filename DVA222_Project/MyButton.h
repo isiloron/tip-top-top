@@ -1,6 +1,6 @@
-#include "StdAfx.h"
-#include "Graphix.h"
-#include "glut.h"
+#pragma once
+
+#include "ControlBase.h"
 
 using namespace std;
 

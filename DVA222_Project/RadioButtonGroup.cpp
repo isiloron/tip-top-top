@@ -1,11 +1,5 @@
 #include "StdAfx.h"
 #include "Graphix.h"
-#include "glut.h"
-#include <string>
-#include <stdlib.h>
-#include "Container.h"
-#include "Label.h"
-#include "RadioButton.h"
 #include "RadioButtonGroup.h"
 
 using namespace std;

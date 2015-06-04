@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Graphix.h"
 #include "Container.h"
 
 using namespace std;

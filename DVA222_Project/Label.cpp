@@ -1,8 +1,4 @@
 #include "StdAfx.h"
-#include "MyButton.h"
-#include "Graphix.h"
-#include "glut.h"
-#include <string>
 #include "Label.h"
 
 using namespace std;

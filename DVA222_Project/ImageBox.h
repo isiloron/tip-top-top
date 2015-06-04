@@ -1,9 +1,5 @@
 #pragma once
-#include "StdAfx.h"
-#include "Graphix.h"
-#include "glut.h"
-#include <string>
-#include <stdlib.h>
+#include "ControlBase.h"
 
 using namespace std;
 

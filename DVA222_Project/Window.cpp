@@ -1,12 +1,7 @@
 
 #include "StdAfx.h"
 #include "Graphix.h"
-#include "glut.h"
 #include "Window.h"
-#include "Container.h"
-#include "Label.h"
-#include <string>
-#include <stdlib.h>
 
 using namespace std;
 

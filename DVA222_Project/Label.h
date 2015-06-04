@@ -1,10 +1,6 @@
 #pragma once
-#include <string>
-#include <stdlib.h>
-#include "StdAfx.h"
-#include "Graphix.h"
-#include "glut.h"
 
+#include "ControlBase.h"
 
 using namespace std;
 

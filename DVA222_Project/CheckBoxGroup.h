@@ -1,12 +1,8 @@
 #pragma once
-#include "StdAfx.h"
-#include "Graphix.h"
-#include "glut.h"
-#include <string>
-#include <stdlib.h>
 #include "Container.h"
 #include "Label.h"
 #include "CheckBox.h"
+#include "Graphix.h"
 
 using namespace std;
 

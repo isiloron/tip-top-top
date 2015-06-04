@@ -1,5 +1,4 @@
 #pragma once
-#include "stdafx.h"
 #include "Container.h"
 
 class Panel : public Container

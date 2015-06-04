@@ -1,6 +1,5 @@
 #pragma once
-#include "stdafx.h"
-#include "Graphix.h"
+#include "ControlBase.h"
 #include "Label.h"
 #include "ImageBox.h"
 
