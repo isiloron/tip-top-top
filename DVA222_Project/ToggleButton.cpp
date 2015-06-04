@@ -16,6 +16,18 @@ void ToggleButton::OnMouseDown(int button, int x, int y)
 	}
 }
 
+void ToggleButton::OnMouseMove(int button, int x, int y)
+{
+	if (x > X && x<X + Width && y>Y && y < Y + Height)
+	{
+		mouseOver = true;
+	}
+	else
+	{
+		mouseOver = false;
+	}
+}
+
 void ToggleButton::OnMouseUp(int button, int x, int y)
 {
 
