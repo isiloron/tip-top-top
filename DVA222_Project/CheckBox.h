@@ -7,6 +7,4 @@ class CheckBox : public ToggleButton
 {
 public:
 	CheckBox(int locX, int locY, int width, int height);
-
-	virtual void OnMouseMove(int button, int x, int y);
 };
