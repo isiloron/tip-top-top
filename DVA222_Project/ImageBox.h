@@ -1,5 +1,6 @@
 #pragma once
 #include "ControlBase.h"
+#include "Graphix.h"
 
 using namespace std;
 

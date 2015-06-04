@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "Label.h"
+#include "Graphix.h"
 
 using namespace std;
 

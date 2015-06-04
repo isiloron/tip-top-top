@@ -2,6 +2,7 @@
 #include "MyButton.h"
 #include "Graphix.h"
 #include "glut.h"
+#include "Button.h"
 
 using namespace std;
 
