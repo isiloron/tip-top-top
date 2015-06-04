@@ -26,11 +26,11 @@ private:
 public:
 	Color(int r = 0, int g = 0, int b = 0)
 	{
-		SetColor(r, g, b);
+		SetRGB(r, g, b);
 	}
 
 
-	void SetColor(int r, int g, int b)
+	void SetRGB(int r, int g, int b)
 	{
 			this->r = CheckRange(r);
 			this->g = CheckRange(g);
@@ -39,7 +39,7 @@ public:
 
 	void DrawWith()
 	{
-		SetColor(r,g,b);
+		SetColor(r, g, b);
 	}
 
 };

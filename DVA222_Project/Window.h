@@ -1,6 +1,7 @@
 #pragma once
 #include "Container.h"
 #include "Label.h"
+#include "Color.h"
 
 using namespace std;
 
@@ -8,13 +9,11 @@ class Window : public Container
 {
 private:
 	Label *title;
-	int backcolorR,backcolorG,backcolorB;
-	int bordercolorR,bordercolorG,bordercolorb;
+	Color backgrundColor, borderColor;
 	bool grab,hoverBar, hoverContents;
 	int Xstart,Ystart,Xend,Yend;
 
 public:
-	Window(int x,int y,int w,int h,string title,int backR,int backG, int backB, int borderR,int borderG,int borderB);
 	Window(int x,int y,int w,int h,string title);
 
 	void SetTitle(string t);

@@ -5,23 +5,12 @@
 
 using namespace std;
 
-Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, int borderR,int borderG,int borderB): Container (x,y,w,h)
-{
-	title = new Label(t,x+2,y-5);
-	backcolorR = backR;
-	backcolorG = backG;
-	backcolorB = backB;
-	bordercolorR = borderR;
-	bordercolorG = borderG;
-	bordercolorb = borderB;
-	grab = hoverBar = hoverContents = false;
-}
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 {
 	title = new Label(t,x+2,y-5);
-	backcolorR = backcolorG = backcolorB = 200;
-	bordercolorR = bordercolorG = bordercolorb = 0;
+	backgrundColor = Color( 200,200,200);
+	borderColor = Color(0, 0, 0);
 	grab = hoverBar = hoverContents=  false;
 }
 
@@ -35,25 +24,23 @@ string Window::GetTitle()
 }
 void Window::SetBackroundColor(int r,int g,int b)
 {
-	backcolorR = r;
-	backcolorG = g;
-	backcolorB = b;
+	backgrundColor.SetRGB(r,g,b);
 }
 void Window::SetBorderColor(int r,int g,int b)
 {
-	bordercolorR = r;
-	bordercolorG = g;
-	bordercolorb = b;
+	borderColor.SetRGB(r, g, b);
 }
 
 void Window::OnPaint()
 {
 	title->OnPaint();
-	SetColor(backcolorR,backcolorG,backcolorB);
+	backgrundColor.DrawWith();
 	FillRectangle(X,Y,Width,Height);
-	SetColor(bordercolorR,bordercolorG,bordercolorb);
-	DrawRectangle(X,Y,Width,Height);
-	DrawRectangle(X,Y-15,Width,15);
+	
+	borderColor.DrawWith();
+	DrawRectangle(X,Y,Width,Height); // border
+	DrawRectangle(X,Y-15,Width,15); // the bar
+	
 	Container::OnPaint();
 }
 

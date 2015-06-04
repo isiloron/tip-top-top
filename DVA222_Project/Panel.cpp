@@ -7,19 +7,17 @@ using namespace std;
 Panel::Panel(int locX, int locY, int width, int height)
 	: Container(locX, locY, width, height)
 {
-	r = g = b = 255;
+	backgroundColor = Color(255,255,255); // white default
 }
 
 void Panel::SetBackgroundColor(int r, int g, int b)
 {
-	this->r = r;
-	this->g = g;
-	this->b = b;
+	backgroundColor.SetRGB(r, g, b);
 }
 
 void Panel::OnPaint(void)
 {
-	SetColor(r, g, b);
+	backgroundColor.DrawWith();
 	FillRectangle(X, Y, Width, Height);
 
 	Container::OnPaint();

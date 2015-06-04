@@ -1,10 +1,11 @@
 #pragma once
 #include "Container.h"
+#include "Color.h"
 
 class Panel : public Container
 {
 private:
-	int r, g, b;
+	Color backgroundColor;
 
 public:
 	Panel(int locX, int locY, int width, int height);
