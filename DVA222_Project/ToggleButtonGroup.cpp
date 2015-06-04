@@ -13,6 +13,7 @@ ToggleButtonGroup::ToggleButtonGroup(string t,int x,int y,int w,int h):Container
 
 void ToggleButtonGroup::AddToggleButton(string buttonlabel)
 {}
+
 void ToggleButtonGroup::SetTitle(string t)
 {
 	title->SetLabel(t);

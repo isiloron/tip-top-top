@@ -15,33 +15,3 @@ void CheckBoxGroup::AddToggleButton(string buttonlabel)
 	AddControl(newbox);
 	numberofboxes++;
 }
-
-void CheckBoxGroup::SetTitle(string t)
-{
-	ToggleButtonGroup::SetTitle(t);
-}
-
-string CheckBoxGroup::GetTitle()
-{
-	return title->GetLabel();
-}
-void CheckBoxGroup::SetBorderColor(int r,int g,int b)
-{
-	ToggleButtonGroup::SetBorderColor(r,g,b);
-
-}
-void CheckBoxGroup::OnPaint()
-{
-	ToggleButtonGroup::OnPaint();
-
-}
-void CheckBoxGroup::OnLoaded()
-{
-	ToggleButtonGroup::OnLoaded();
-
-}
-void CheckBoxGroup::MovePosition(int dx, int dy)
-{
-	ToggleButtonGroup::MovePosition(dx,dy);
-
-}

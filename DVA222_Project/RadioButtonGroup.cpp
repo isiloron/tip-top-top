@@ -18,34 +18,6 @@ void RadioButtonGroup::AddToggleButton(string buttonlabel)
 	currentlyPressed = NULL;
 }
 
-void RadioButtonGroup::SetTitle(string t)
-{
-	title->SetLabel(t);
-}
-
-string RadioButtonGroup::GetTitle()
-{
-	return title->GetLabel();
-}
-void RadioButtonGroup::SetBorderColor(int r,int g,int b)
-{
-	ToggleButtonGroup::SetBorderColor(r,g,b);
-
-}
-void RadioButtonGroup::OnPaint()
-{
-	ToggleButtonGroup::OnPaint();
-	//SetColor(borderR,borderG,borderB);
-	//DrawRectangle(X,Y,Width,Height);
-	//Container::OnPaint();
-	//title->OnPaint();
-}
-void RadioButtonGroup::OnLoaded()
-{
-	ToggleButtonGroup::OnLoaded();
-
-}
-
 void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 {
 	Container::OnMouseDown(button,x,y);
@@ -74,11 +46,5 @@ void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 		currentlyPressed->SetPressed(false);
 		currentlyPressed = newPressed;
 	}
-
-}
-
-void RadioButtonGroup::MovePosition(int dx, int dy)
-{
-	ToggleButtonGroup::MovePosition(dx,dy);
 
 }
