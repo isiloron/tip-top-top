@@ -20,6 +20,7 @@ Container::~Container()
 
 void Container::AddControl(ControlBase* control)
 {
+	control->MovePosition(X, Y);
 	controlList.push_back(control);
 }
 
