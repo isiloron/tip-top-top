@@ -2,20 +2,17 @@
 #include "Graphix.h"
 #include "RadioButtonGroup.h"
 
-using namespace std;
 
-RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):Container(x,y,w,h)
+RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):ToggleButtonGroup(initTitle,x,y,w,h)
 {
-	title = new Label(initTitle,x,y-3);
-	numberofboxes = 1;
 	borderR = borderG = borderB = 0;
 	currentlyPressed = NULL;
 }
 
-void RadioButtonGroup::AddRadioButton(string Radiolabel)
+void RadioButtonGroup::AddToggleButton(string buttonlabel)
 {
-	RadioButton* newRadio = new RadioButton(X+10,Y+15*numberofboxes,12,12);
-	newRadio->SetLabel(Radiolabel);
+	RadioButton* newRadio = new RadioButton(12,13*numberofboxes,12,12);
+	newRadio->SetLabel(buttonlabel);
 	AddControl(newRadio);
 	numberofboxes++;
 	currentlyPressed = NULL;
@@ -32,12 +29,12 @@ string RadioButtonGroup::GetTitle()
 }
 void RadioButtonGroup::SetBorderColor(int r,int g,int b)
 {
-		borderR = r;
-		borderG = g;
-		borderB = b;
+	ToggleButtonGroup::SetBorderColor(r,g,b);
+
 }
 void RadioButtonGroup::OnPaint()
 {
+	ToggleButtonGroup::OnPaint();
 	SetColor(borderR,borderG,borderB);
 	DrawRectangle(X,Y,Width,Height);
 	Container::OnPaint();
@@ -45,8 +42,8 @@ void RadioButtonGroup::OnPaint()
 }
 void RadioButtonGroup::OnLoaded()
 {
-	title->OnLoaded();
-	Container::OnLoaded();
+	ToggleButtonGroup::OnLoaded();
+
 }
 
 void RadioButtonGroup::OnMouseDown(int button, int x, int y)
@@ -82,7 +79,6 @@ void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 
 void RadioButtonGroup::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx,dy);
-	title->MovePosition(dx,dy);
-	Container::MovePosition(dx,dy);
+	ToggleButtonGroup::MovePosition(dx,dy);
+
 }

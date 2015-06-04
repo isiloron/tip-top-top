@@ -4,23 +4,21 @@
 
 using namespace std;
 
-CheckBoxGroup::CheckBoxGroup(string initTitle,int x,int y,int w,int h):Container(x,y,w,h)
+CheckBoxGroup::CheckBoxGroup(string initTitle,int x,int y,int w,int h):ToggleButtonGroup(initTitle,x,y,w,h)
 {
-	title = new Label(initTitle,x,y-3);
-	numberofboxes = 1;
 }
 
-void CheckBoxGroup::AddCheckBox(string boxlabel)
+void CheckBoxGroup::AddToggleButton(string buttonlabel)
 {
-	CheckBox* newbox = new CheckBox(X+10,Y+15*numberofboxes,12,12);
-	newbox->SetLabel(boxlabel);
+	CheckBox* newbox = new CheckBox(12,13*numberofboxes,12,12);
+	newbox->SetLabel(buttonlabel);
 	AddControl(newbox);
 	numberofboxes++;
 }
 
 void CheckBoxGroup::SetTitle(string t)
 {
-	title->SetLabel(t);
+	ToggleButtonGroup::SetTitle(t);
 }
 
 string CheckBoxGroup::GetTitle()
@@ -29,25 +27,21 @@ string CheckBoxGroup::GetTitle()
 }
 void CheckBoxGroup::SetBorderColor(int r,int g,int b)
 {
-		borderR = r;
-		borderG = g;
-		borderB = b;
+	ToggleButtonGroup::SetBorderColor(r,g,b);
+
 }
 void CheckBoxGroup::OnPaint()
 {
-	SetColor(borderR,borderG,borderB);
-	DrawRectangle(X,Y,Width,Height);
-	Container::OnPaint();
-	title->OnPaint();
+	ToggleButtonGroup::OnPaint();
+
 }
 void CheckBoxGroup::OnLoaded()
 {
-	title->OnLoaded();
-	Container::OnLoaded();
+	ToggleButtonGroup::OnLoaded();
+
 }
 void CheckBoxGroup::MovePosition(int dx, int dy)
 {
-	ControlBase::MovePosition(dx,dy);
-	title->MovePosition(dx,dy);
-	Container::MovePosition(dx,dy);
+	ToggleButtonGroup::MovePosition(dx,dy);
+
 }

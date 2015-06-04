@@ -8,6 +8,7 @@ class Label : public ControlBase
 {
 private:
 	string label;
+	int textColorR,textColorG,textColorB;
 
 public:
 	Label();

@@ -2,21 +2,18 @@
 #include "Container.h"
 #include "Label.h"
 #include "RadioButton.h"
+#include "ToggleButtonGroup.h"
 
-using namespace std;
 
-class RadioButtonGroup : public Container
+class RadioButtonGroup : public ToggleButtonGroup
 {
 private:
-	Label* title;
-	int numberofboxes;
-	int borderR,borderG,borderB;
 	RadioButton* currentlyPressed;
 
 public:
 	RadioButtonGroup(string t,int x,int y,int w,int h);
 
-	void AddRadioButton(string boxlabel);
+	void AddToggleButton(string buttonlabel);
 	void SetTitle(string t);
 	string GetTitle();
 	void SetBorderColor(int r,int g,int b);

@@ -9,10 +9,12 @@ Label::Label()
 
 Label::Label(int x, int y) : ControlBase(x,y,0,0)
 {
+	textColorR = textColorG = textColorB = 0;
 }
 
 Label::Label(string l, int x, int y) :ControlBase(x, y,0,0)
 {
+	textColorR = textColorG = textColorB = 0;
 	label = l;
 }
 
@@ -29,12 +31,14 @@ void Label::SetLabel(string s)
 
 void Label::SetLabelColor(int r,int g,int b)
 {
-
+	textColorR = r;
+	textColorG = g;
+	textColorB = b;
 }
 
 void Label::OnPaint()
 {
-		SetColor(0,0,0);
+		SetColor(textColorR,textColorG,textColorB);
 		DrawString(label,X,Y);
 }
 
