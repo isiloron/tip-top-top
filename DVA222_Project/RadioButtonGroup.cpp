@@ -5,7 +5,7 @@
 
 RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):ToggleButtonGroup(initTitle,x,y,w,h)
 {
-	borderR = borderG = borderB = 0;
+	//borderR = borderG = borderB = 0;
 	currentlyPressed = NULL;
 }
 
@@ -35,10 +35,10 @@ void RadioButtonGroup::SetBorderColor(int r,int g,int b)
 void RadioButtonGroup::OnPaint()
 {
 	ToggleButtonGroup::OnPaint();
-	SetColor(borderR,borderG,borderB);
-	DrawRectangle(X,Y,Width,Height);
-	Container::OnPaint();
-	title->OnPaint();
+	//SetColor(borderR,borderG,borderB);
+	//DrawRectangle(X,Y,Width,Height);
+	//Container::OnPaint();
+	//title->OnPaint();
 }
 void RadioButtonGroup::OnLoaded()
 {

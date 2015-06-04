@@ -6,12 +6,12 @@ using namespace std;
 
 Label::Label(int x, int y) : ControlBaseExtended(x,y,0,0)
 {
-	textColorR = textColorG = textColorB = 0;
+	textColor = Color(0,0,0);
 }
 
 Label::Label(string l, int x, int y) : ControlBaseExtended(x, y, 0, 0)
 {
-	textColorR = textColorG = textColorB = 0;
+	textColor = Color(0,0,0);
 	label = l;
 }
 
@@ -28,14 +28,13 @@ void Label::SetLabel(string s)
 
 void Label::SetLabelColor(int r,int g,int b)
 {
-	textColorR = r;
-	textColorG = g;
-	textColorB = b;
+	textColor.SetRGB(r,g,b);
+
 }
 
 void Label::OnPaint()
 {
-		SetColor(textColorR,textColorG,textColorB);
+		textColor.DrawWith();
 		DrawString(label,X,Y);
 }
 

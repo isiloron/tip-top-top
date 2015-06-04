@@ -3,6 +3,7 @@
 #include "Graphix.h"
 #include "Container.h"
 #include "Label.h"
+#include "Color.h"
 
 using namespace std;
 
@@ -11,7 +12,8 @@ class ToggleButtonGroup : public Container
 protected:
 	Label* title;
 	int numberofboxes;
-	int borderR,borderG,borderB;
+	Color borderColor;
+	//int borderR,borderG,borderB;
 
 public:
 	ToggleButtonGroup(string t,int x,int y,int w,int h);

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ControlBaseExtended.h"
+#include "Color.h"
 
 using namespace std;
 
@@ -8,7 +9,8 @@ class Label : public ControlBaseExtended
 {
 private:
 	string label;
-	int textColorR,textColorG,textColorB;
+	Color textColor;
+	//int textColorR,textColorG,textColorB;
 
 public:
 	Label(int x,int y);

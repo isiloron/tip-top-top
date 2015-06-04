@@ -5,7 +5,8 @@
 
 ToggleButtonGroup::ToggleButtonGroup(string t,int x,int y,int w,int h):Container(x,y,w,h)
 {
-	borderR = borderG = borderB = 0;
+	borderColor = Color(0,0,0);
+	//borderR = borderG = borderB = 0;
 	title = new Label(t,x,y-3);
 	numberofboxes = 1;
 }
@@ -22,13 +23,11 @@ string ToggleButtonGroup::GetTitle()
 }
 void ToggleButtonGroup::SetBorderColor(int r,int g,int b)
 {
-		borderR = r;
-		borderG = g;
-		borderB = b;
+	borderColor.SetRGB(r,g,b);
 }
 void ToggleButtonGroup::OnPaint()
 {
-	SetColor(borderR,borderG,borderB);
+	borderColor.DrawWith();
 	DrawRectangle(X,Y,Width,Height);
 	Container::OnPaint();
 	title->OnPaint();
