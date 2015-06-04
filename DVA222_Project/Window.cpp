@@ -19,7 +19,7 @@ Window::Window(int x,int y,int w,int h,string t,int backR,int backG, int backB, 
 	bordercolorR = borderR;
 	bordercolorG = borderG;
 	bordercolorb = borderB;
-	grab = hover = false;
+	grab = hoverBar = hoverContents = false;
 }
 
 Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
@@ -27,7 +27,7 @@ Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 	title = new Label(t,x+2,y-5);
 	backcolorR = backcolorG = backcolorB = 200;
 	bordercolorR = bordercolorG = bordercolorb = 0;
-	grab = hover=  false;
+	grab = hoverBar = hoverContents=  false;
 }
 
 void Window::SetTitle(string t)
@@ -59,20 +59,26 @@ void Window::OnPaint()
 	SetColor(bordercolorR,bordercolorG,bordercolorb);
 	DrawRectangle(X,Y,Width,Height);
 	DrawRectangle(X,Y-15,Width,15);
+	Container::OnPaint();
 }
 
 void Window::OnLoaded()
 {
-
+	title->OnLoaded();
+	Container::OnLoaded();
 }
 
 void Window::OnMouseDown(int button, int x, int y)
 {
-	if(hover && button==MOUSE_LEFT)
+	if(hoverBar && button==MOUSE_LEFT)
 	{
 		grab = true;
 		Xstart = x;
 		Ystart = y;
+	}
+	else if (hoverContents && button == MOUSE_LEFT)
+	{
+		Container::OnMouseDown(button, x, y);
 	}
 }
 
@@ -80,8 +86,12 @@ void Window::OnMouseUp(int button, int x, int y)
 {
 	if(grab == true)
 	{
-		UpdatePosition(x - Xstart, y-Ystart);
+		MovePosition(x - Xstart, y-Ystart);
 		grab = false;
+	}
+	else if (hoverContents && button == MOUSE_LEFT)
+	{
+		Container::OnMouseUp(button,x,y);
 	}
 }
 
@@ -89,22 +99,33 @@ void Window::OnMouseMove(int button, int x, int y)
 {
 	if(grab == true)
 	{
-		UpdatePosition(x - Xstart, y-Ystart);
+		MovePosition(x - Xstart, y - Ystart);
 		Xstart = x;
 		Ystart = y;
 	}
-	else if (x>X && x < X+Width && y >Y-15 && y < Y)
-		hover = true;
+	
+	if (x>X && x < X+Width && y >Y-15 && y < Y)
+		hoverBar = true;
 	else
     {
-		hover= false;
+		hoverBar= false;
     }
 	
+	if (x>X && x<X + Width && y>Y && y < Y + Height)
+	{
+		hoverContents = true;
+		Container::OnMouseMove(button,x,y);
+	}
+	else
+	{
+		hoverContents = false;
+	}
+
 }
 
-void Window::UpdatePosition(int dx, int dy)
+void Window::MovePosition(int dx, int dy)
 {
-	ControlBase::UpdatePosition(dx,dy);
-	title->UpdatePosition(dx, dy);
-	Container::UpdatePosition(dx,dy);
+	ControlBase::MovePosition(dx, dy);
+	title->MovePosition(dx, dy);
+	Container::MovePosition(dx, dy);
 }

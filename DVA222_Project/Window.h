@@ -15,7 +15,7 @@ private:
 	Label *title;
 	int backcolorR,backcolorG,backcolorB;
 	int bordercolorR,bordercolorG,bordercolorb;
-	bool grab,hover;
+	bool grab,hoverBar, hoverContents;
 	int Xstart,Ystart,Xend,Yend;
 
 public:
@@ -32,5 +32,5 @@ public:
 	void OnMouseDown(int button, int x, int y);
 	void OnMouseUp(int button, int x, int y);
 	void OnMouseMove(int button, int x, int y);
-	void UpdatePosition(int dx, int dy);
+	void MovePosition(int dx, int dy);
 };

@@ -56,7 +56,7 @@ void ControlBase::OnResize(int width, int height)
 {
 }
 
-void ControlBase::UpdatePosition(int dx, int dy)
+void ControlBase::MovePosition(int dx, int dy)
 {
 	X += dx;
 	Y += dy;

@@ -22,5 +22,5 @@ public:
 	virtual void OnMouseUp(int button, int x, int y);
 	virtual void OnMouseMove(int button, int x, int y);
 	virtual void OnResize(int width, int height);
-	virtual void UpdatePosition(int dx, int dy);
+	virtual void MovePosition(int dx, int dy);
 };

@@ -83,11 +83,11 @@ void Container::OnResize(int width, int height)
 	}
 }
 
-void Container::UpdatePosition(int dx, int dy)
+void Container::MovePosition(int dx, int dy)
 {
 	for (int i = 0; i < controlList.size(); i++)
 	{
-		controlList[i]->UpdatePosition(dx, dy);
+		controlList[i]->MovePosition(dx, dy);
 	}
 }
 

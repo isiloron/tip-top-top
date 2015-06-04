@@ -33,38 +33,35 @@ void Button::LoadBitmaps(string normal, string hover, string press)
 
 void Button::LoadNormalBitmap(string filename)
 {
-	if (normal != NULL)
-		normal->SetTexture(filename);
+	normal->SetTexture(filename);
 }
 
 void Button::LoadHoverBitmap(string filename)
 {
-	if (hover != NULL)
-		hover->SetTexture(filename);
+	hover->SetTexture(filename);
 }
 
 void Button::LoadPressBitmap(string filename)
 {
-	if (press != NULL)
-		press->SetTexture(filename);
+	press->SetTexture(filename);
 }
 
 void Button::SetLabel(string text)
 {
-	if (label != NULL)
-		label->SetLabel(text);
+	label->SetLabel(text);
+}
+
+void Button::SetLabelColor(int r, int g, int b)
+{
+	label->SetLabelColor(r,g,b);
 }
 
 void Button::OnLoaded()
 {
-	if (normal != NULL)
-		normal->OnLoaded();
-	if (hover != NULL)
-		hover->OnLoaded();
-	if (press != NULL)
-		press->OnLoaded();
-	if (label != NULL)
-		label->OnLoaded();
+	normal->OnLoaded();
+	hover->OnLoaded();
+	press->OnLoaded();
+	label->OnLoaded();
 }
 
 void Button::OnPaint()
@@ -81,10 +78,10 @@ void Button::OnPaint()
 	{
 		image = normal;
 	}
+
 	image->OnPaint();
 
-	if (label != NULL)
-		label->OnPaint();
+	label->OnPaint();
 }
 
 void Button::OnMouseDown(int button, int x, int y)
@@ -112,11 +109,11 @@ void Button::OnMouseMove(int button, int x, int y)
 	}
 }
 
-void Button::UpdatePosition(int dx, int dy)
+void Button::MovePosition(int dx, int dy)
 {
-	ControlBase::UpdatePosition(dx, dy);
-	normal->UpdatePosition(dx, dy);
-	hover->UpdatePosition(dx, dy);
-	press->UpdatePosition(dx, dy);
-	label->UpdatePosition(dx, dy);
+	ControlBase::MovePosition(dx, dy);
+	normal->MovePosition(dx, dy);
+	hover->MovePosition(dx, dy);
+	press->MovePosition(dx, dy);
+	label->MovePosition(dx, dy);
 }
