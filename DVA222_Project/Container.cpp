@@ -23,7 +23,7 @@ void Container::AddControl(ControlBaseExtended* control)
 {
 	control->MovePosition(X, Y);
 	controlList.push_back(control);
-	sort(controlList.begin(), controlList.end(), ControlBaseExtended::Compare);
+	
 }
 
 void Container::OnLoaded()
@@ -32,6 +32,8 @@ void Container::OnLoaded()
 	{
 		controlList[i]->OnLoaded();
 	}
+
+	sort(controlList.begin(), controlList.end(), ControlBaseExtended::Compare);
 }
 
 void Container::OnPaint()

@@ -11,10 +11,10 @@ RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):Tog
 
 void RadioButtonGroup::AddToggleButton(string buttonlabel)
 {
-	RadioButton* newRadio = new RadioButton(12,13*numberofboxes,12,12);
+	RadioButton* newRadio = new RadioButton(12, 13 * numberOfButtons, 12, 12);
 	newRadio->SetLabel(buttonlabel);
 	AddControl(newRadio);
-	numberofboxes++;
+	numberOfButtons++;
 	currentlyPressed = NULL;
 }
 
@@ -25,10 +25,10 @@ void RadioButtonGroup::OnMouseDown(int button, int x, int y)
 	RadioButton* newPressed = NULL;
 	for(size_t i = 0; i<controlList.size();i++)
 	{
-		RadioButton* button = (RadioButton*)controlList[i];
-		if(button->IsPressed() && button != currentlyPressed)
+		newPressed = (RadioButton*)controlList[i];
+		if (newPressed->IsPressed() && newPressed != currentlyPressed)
 		{
-			newPressed = button;
+			break;
 		}
 	}
 

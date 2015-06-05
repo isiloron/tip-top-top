@@ -6,9 +6,8 @@
 ToggleButtonGroup::ToggleButtonGroup(string t,int x,int y,int w,int h):Container(x,y,w,h)
 {
 	borderColor = Color(0,0,0);
-	//borderR = borderG = borderB = 0;
 	title = new Label(t,x,y-3);
-	numberofboxes = 1;
+	numberOfButtons = 1;
 }
 
 void ToggleButtonGroup::AddToggleButton(string buttonlabel)

@@ -11,14 +11,13 @@ class ToggleButtonGroup : public Container
 {
 protected:
 	Label* title;
-	int numberofboxes;
+	int numberOfButtons;
 	Color borderColor;
-	//int borderR,borderG,borderB;
 
 public:
 	ToggleButtonGroup(string t,int x,int y,int w,int h);
 
-	virtual void AddToggleButton(string buttonlabel);
+	virtual void AddToggleButton(string buttonLabel);
 	void SetTitle(string t);
 	string GetTitle();
 	void SetBorderColor(int r,int g,int b);

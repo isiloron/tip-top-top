@@ -8,10 +8,10 @@ CheckBoxGroup::CheckBoxGroup(string initTitle,int x,int y,int w,int h):ToggleBut
 {
 }
 
-void CheckBoxGroup::AddToggleButton(string buttonlabel)
+void CheckBoxGroup::AddToggleButton(string buttonLabel)
 {
-	CheckBox* newbox = new CheckBox(12,13*numberofboxes,12,12);
-	newbox->SetLabel(buttonlabel);
+	CheckBox* newbox = new CheckBox(12,13*numberOfButtons,12,12);
+	newbox->SetLabel(buttonLabel);
 	AddControl(newbox);
-	numberofboxes++;
+	numberOfButtons++;
 }
