@@ -16,8 +16,9 @@ protected:
 
 public:
 	ToggleButtonGroup(string t,int x,int y,int w,int h);
+	~ToggleButtonGroup();
 
-	virtual void AddToggleButton(string buttonLabel);
+	virtual void AddToggleButton(string buttonLabel) = 0;
 	void SetTitle(string t);
 	string GetTitle();
 	void SetBorderColor(int r,int g,int b);

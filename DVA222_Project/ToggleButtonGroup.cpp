@@ -10,8 +10,10 @@ ToggleButtonGroup::ToggleButtonGroup(string t,int x,int y,int w,int h):Container
 	numberOfButtons = 1;
 }
 
-void ToggleButtonGroup::AddToggleButton(string buttonlabel)
-{}
+ToggleButtonGroup::~ToggleButtonGroup()
+{
+	delete title;
+}
 
 void ToggleButtonGroup::SetTitle(string t)
 {

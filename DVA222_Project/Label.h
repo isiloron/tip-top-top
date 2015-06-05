@@ -10,7 +10,6 @@ class Label : public ControlBaseExtended
 private:
 	string label;
 	Color textColor;
-	//int textColorR,textColorG,textColorB;
 
 public:
 	Label(int x,int y);

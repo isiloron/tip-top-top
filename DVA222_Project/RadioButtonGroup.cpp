@@ -5,7 +5,6 @@
 
 RadioButtonGroup::RadioButtonGroup(string initTitle,int x,int y,int w,int h):ToggleButtonGroup(initTitle,x,y,w,h)
 {
-	//borderR = borderG = borderB = 0;
 	currentlyPressed = NULL;
 }
 
@@ -15,7 +14,6 @@ void RadioButtonGroup::AddToggleButton(string buttonlabel)
 	newRadio->SetLabel(buttonlabel);
 	AddControl(newRadio);
 	numberOfButtons++;
-	currentlyPressed = NULL;
 }
 
 void RadioButtonGroup::OnMouseDown(int button, int x, int y)

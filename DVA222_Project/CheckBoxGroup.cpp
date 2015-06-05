@@ -4,7 +4,8 @@
 
 using namespace std;
 
-CheckBoxGroup::CheckBoxGroup(string initTitle,int x,int y,int w,int h):ToggleButtonGroup(initTitle,x,y,w,h)
+CheckBoxGroup::CheckBoxGroup(string initTitle,int x,int y,int w,int h)
+	:ToggleButtonGroup(initTitle,x,y,w,h)
 {
 }
 

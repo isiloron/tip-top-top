@@ -14,6 +14,11 @@ Window::Window(int x,int y,int w,int h,string t): Container(x,y,w,h)
 	grab = hoverBar = hoverContents=  false;
 }
 
+Window::~Window()
+{
+	delete title;
+}
+
 void Window::SetTitle(string t)
 {
 	title->SetLabel(t);

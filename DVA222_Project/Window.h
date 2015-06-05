@@ -15,6 +15,7 @@ private:
 
 public:
 	Window(int x,int y,int w,int h,string title);
+	~Window();
 
 	void SetTitle(string t);
 	string GetTitle();
